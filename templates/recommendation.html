@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('../static/netflic.jpg'); /* Replace 'netflix_background.jpg' with the path to your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .movie {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .movie img {
+            max-width: 200px;
+            max-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recommended Movies for "{{ movie_title }}"</h1>
+        <div class="row">
+            {% for recommendation, poster_url in recommendation_data %}
+                <div class="col-md-4 movie">
+                    <img src="{{ poster_url }}" alt="{{ recommendation }}" class="img-fluid">
+                    <p>{{ recommendation }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+</body>
+</html>
