@@ -1,4 +1,4 @@
-Movie Recommendation System
+#Movie Recommendation System
 This Movie Recommendation System is designed to provide users with recommendations for similar movies based on the input movie name. It utilizes cosine similarity from the scikit-learn library to compute the similarity between movies and Flask as the backend framework to handle requests and serve recommendations.
 
 Features Input Movie Name: Users can enter a movie name into the search bar. Recommendations: After submitting the movie name, the system provides a list of recommended movies that are similar to the input movie.
